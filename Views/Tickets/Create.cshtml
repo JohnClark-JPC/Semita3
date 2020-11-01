@@ -1,0 +1,68 @@
+﻿@model Semita3.Models.Ticket
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Ticket</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TicketTitle" class="control-label"></label>
+                <input asp-for="TicketTitle" class="form-control" />
+                <span asp-validation-for="TicketTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketDescription" class="control-label"></label>
+                <input asp-for="TicketDescription" class="form-control" />
+                <span asp-validation-for="TicketDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketSubmitter" class="control-label"></label>
+                <input asp-for="TicketSubmitter" class="form-control" />
+                <span asp-validation-for="TicketSubmitter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketPriority" class="control-label"></label>
+                <input asp-for="TicketPriority" class="form-control" />
+                <span asp-validation-for="TicketPriority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketStatus" class="control-label"></label>
+                <input asp-for="TicketStatus" class="form-control" />
+                <span asp-validation-for="TicketStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketCreatedOn" class="control-label"></label>
+                <input asp-for="TicketCreatedOn" class="form-control" />
+                <span asp-validation-for="TicketCreatedOn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketUpdatedOn" class="control-label"></label>
+                <input asp-for="TicketUpdatedOn" class="form-control" />
+                <span asp-validation-for="TicketUpdatedOn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketComment" class="control-label"></label>
+                <input asp-for="TicketComment" class="form-control" />
+                <span asp-validation-for="TicketComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

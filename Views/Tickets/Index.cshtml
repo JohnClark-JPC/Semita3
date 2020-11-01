@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Semita3.Models.Ticket>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TicketTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TicketDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TicketSubmitter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TicketPriority)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TicketStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TicketCreatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TicketUpdatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TicketComment)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketSubmitter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketPriority)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketCreatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketUpdatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketComment)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TicketId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TicketId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TicketId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
