@@ -19,4 +19,5 @@ namespace Semita3.Models
         [DataType(DataType.DateTime)]
         public DateTime ProjectStartDate { get; set; }
     }
+
 }
