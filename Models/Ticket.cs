@@ -7,6 +7,9 @@ namespace Semita3.Models
 {
     public class Ticket
     {
+        public int ProjectId { get; set; }
+        // navigation prop
+        public Project Project { get; set; }
         public int TicketId { get; set; }
         public string TicketTitle { get; set; }
         public string TicketDescription { get; set; }

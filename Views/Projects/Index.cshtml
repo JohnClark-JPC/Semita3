@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<Semita3.Models.Project>
 
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -19,6 +20,7 @@
                 @Html.DisplayNameFor(model => model.ProjectStartDate)
             </th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -35,7 +37,10 @@
                 <a asp-action="Details" asp-route-id="@item.ProjectId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.ProjectId">Delete</a>
             </td>
+            <td>@item.Tickets.Count()</td>
         </tr>
 }
     </tbody>
+
+
 </table>

@@ -18,6 +18,9 @@ namespace Semita3.Models
         [Display(Name = "Project Start Date")]
         [DataType(DataType.DateTime)]
         public DateTime ProjectStartDate { get; set; }
+
+        public IEnumerable<Ticket> Tickets { get; set; }
+
     }
 
 }

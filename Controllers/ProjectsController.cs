@@ -22,7 +22,7 @@ namespace Semita3.Controllers
         // GET: Projects
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Project.ToListAsync());
+            return View(await _context.Project.Include(p => p.Tickets).ToListAsync());
         }
 
         // GET: Projects/Details/5
