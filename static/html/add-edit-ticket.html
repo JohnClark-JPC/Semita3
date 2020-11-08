@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<header>
+    <h4>Edit Tickets</h4>
+</header>
+<section>
+    <h5>Ticket Name</h5>
+    <dialog></dialog>
+    <h5>Project</h5>
+    <select>
+        name="project" id="project">
+        <option value="project1">Project 1</option>
+        <option value="project2">Project 2</option>
+        <option value="project3">Project 3</option>
+    </select><br>
+    <h5>Priority</h5>
+    <select>
+        name="priority" id="priority">
+        <option value="priority1">Low</option>
+        <option value="priority2">Medium</option>
+        <option value="priority3">High</option>
+    </select><br>
+    <h5>Ticket Type</h5>
+    <select>
+        name="ticket-type" id="ticket-type">
+        <option value="ticket-type1">Type 1</option>
+        <option value="ticket-type2">Type 2</option>
+        <option value="ticket-type3">Type 3</option>
+    </select><br>
+    <h5>Ticket Description</h5>
+    <textarea>Ticket description goes here</textarea>
+    <h5>Assign Developer</h5>
+    <select>
+        name="developer-name" id="developer-name">
+        <option value="developer-name1">Moe</option>
+        <option value="developer-name2">Larry</option>
+        <option value="developer-name3">Curly</option>
+    </select>
+
+    <h5>Assign Ticket Status</h5>
+    <select>
+        name="ticket-status" id="ticket-status">
+        <option value="ticket-status-todo">TO DO</option>
+        <option value="ticket-status-inprogress">IN PROGRESS</option>
+        <option value="ticket-status-codereview">CODE REVIEW</option>
+        <option value="ticket-status-complete">COMPLETE</option>
+    </select><br><br>
+
+    <button>Apply</button>
+
+    <p>Return to List of Tickets (link text)</p>
+</section>
+</body>
+</html>
