@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Tickets</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -13,13 +13,10 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.ProjectTitle)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.TicketTitle)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TicketDescription)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TicketSubmitter)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TicketPriority)
@@ -33,9 +30,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.TicketUpdatedOn)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TicketComment)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -43,13 +37,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.ProjectTitle)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.TicketTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TicketDescription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TicketSubmitter)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TicketPriority)
@@ -62,9 +53,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TicketUpdatedOn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TicketComment)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.TicketId">Edit</a> |

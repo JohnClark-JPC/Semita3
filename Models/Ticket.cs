@@ -10,6 +10,7 @@ namespace Semita3.Models
         public int ProjectId { get; set; }
         // navigation prop
         public Project Project { get; set; }
+        public string ProjectTitle { get; set; }
         public int TicketId { get; set; }
         public string TicketTitle { get; set; }
         public string TicketDescription { get; set; }

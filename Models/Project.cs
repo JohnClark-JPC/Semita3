@@ -12,15 +12,20 @@ namespace Semita3.Models
         [Required(ErrorMessage = "Project must have an ID.")]
         public int ProjectId { get; set; }
 
+
         [Display(Name = "Project Name")]
         [Required(ErrorMessage = "Project must have a name.")]
         public string ProjectTitle { get; set; }
+
+
         [Display(Name = "Project Start Date")]
         [DataType(DataType.DateTime)]
         public DateTime ProjectStartDate { get; set; }
 
 
-        public IEnumerable<Ticket> Tickets { get; set; }
+        //public IEnumerable<Ticket> Tickets { get; set; }
+
+        public Ticket Ticket { get; set; }
 
     }
 
